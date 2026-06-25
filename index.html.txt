@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fajnota | Vaša kantína</title>
+  <meta name="description" content="Pozrite si denné menu, stále raňajkové menu, kávový lístok a pošlite dopyt na catering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <img src="logo-fajnota.png" alt="Fajnota logo" class="brand-logo" />
+        <div>
+          <div class="brand-name">Fajnota</div>
+          <div class="brand-subtitle">Vaša kantína</div>
+        </div>
+      </a>
+
+      <nav class="menu" aria-label="Hlavná navigácia">
+        <a href="#obed">Menu</a>
+        <a href="#ranajky">Raňajky</a>
+        <a href="#kava">Káva</a>
+        <a href="#catering">Catering</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Otvoriť menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        ☰
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#obed">Menu</a>
+      <a href="#ranajky">Raňajky</a>
+      <a href="#kava">Káva</a>
+      <a href="#catering">Catering</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Jednoducho, chutne a priamo v budove</p>
+          <h1>Fajnota – každý deň niečo dobré</h1>
+
+          <div class="hero-text-box">
+            <p class="hero-text">
+              Na jednom mieste si zamestnanci pozrú aktuálne obedové menu, stále raňajkové menu a kávový lístok. Zároveň môžu pohodlne odoslať dopyt na catering pre firemné alebo súkromné účely.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#obed">Pozrieť menu</a>
+            <a class="btn btn-secondary" href="#catering">Objednať catering</a>
+          </div>
+
+          <div class="hero-cards">
+            <article class="mini-card">
+              <h3>Každý pracovný deň</h3>
+              <p>denná obedová ponuka</p>
+            </article>
+
+            <article class="mini-card">
+              <h3>Stále menu</h3>
+              <p>raňajky a káva</p>
+            </article>
+
+            <article class="mini-card">
+              <h3>Na mieru</h3>
+              <p>catering pre firmu aj súkromie</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="info-panel">
+          <div class="panel-top">
+            <div>
+              <p class="eyebrow">Fajnota</p>
+              <h2>Základné informácie</h2>
+            </div>
+            <span class="tag">ESTD. 2023</span>
+          </div>
+
+          <div class="info-box">
+            <strong>Otváracie hodiny</strong>
+            <p>Pondelok – Piatok: 07:00 – 13:30</p>
+            <p>Raňajky, káva, snacky a obedová ponuka</p>
+          </div>
+
+          <div class="info-box">
+            <strong>Objednávky a catering</strong>
+            <p>Pre porady, školenia, návštevy aj súkromné príležitosti.</p>
+            <p>Stačí vyplniť formulár nižšie.</p>
+          </div>
+
+          <div class="info-box info-box-dark">
+            <strong>Poznámka pre zamestnancov</strong>
+            <p>
+              Denné obedové menu sa mení priebežne. Raňajkové menu a kávový lístok zostávajú stabilné.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="obed">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Aktuálna ponuka</p>
+            <h2>Denné menu</h2>
+          </div>
+          <div class="notice">22.06. – 26.06.2026</div>
+        </div>
+
+        <div class="grid cards-grid" id="dailyMenu"></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="ranajky">
+      <div class="container">
+        <div class="section-head vertical">
+          <div>
+            <p class="eyebrow">Stále menu</p>
+            <h2>Raňajky Fajnota</h2>
+            <p>Každý deň čerstvé pečivo</p>
+          </div>
+        </div>
+
+        <div class="breakfast-layout">
+          <div class="menu-list" id="breakfastList"></div>
+
+          <div class="featured-card">
+            <p class="eyebrow eyebrow-light">Zvýhodnené menu</p>
+            <div id="comboList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kava">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Stále menu</p>
+            <h2>Káva a doplnky</h2>
+          </div>
+          <div class="notice">Čerstvo mletá káva</div>
+        </div>
+
+        <div class="grid coffee-grid" id="coffeeList"></div>
+      </div>
+    </section>
+
+    <section class="section catering-section" id="catering">
+      <div class="container catering-grid">
+        <div>
+          <p class="eyebrow eyebrow-light">Catering</p>
+          <h2>Občerstvenie na pracovné aj súkromné príležitosti</h2>
+          <p class="light-text">
+            Pripravíme jednoduchý catering do kancelárie, zasadacej miestnosti aj na menšie oslavy. Vhodné pre interné stretnutia, školenia, návštevy, porady alebo súkromné objednávky.
+          </p>
+
+          <div class="catering-points" id="cateringPoints"></div>
+        </div>
+
+        <div class="form-card">
+          <h3>Nezáväzný dopyt</h3>
+          <p>
+            Vyplňte krátky formulár a pripravíme vám ponuku podľa vašich požiadaviek.
+          </p>
+
+          <form
+  id="cateringForm"
+  class="contact-form"
+  action="https://formspree.io/f/xlgygpzv"
+  method="POST"
+>
+            <div class="form-row">
+              <label>
+                <span>Meno a priezvisko</span>
+                <input type="text" name="name" placeholder="Vaše meno" required />
+              </label>
+
+              <label>
+                <span>E-mail</span>
+                <input type="email" name="email" placeholder="vas@email.sk" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span>Dátum podujatia</span>
+                <input type="date" name="date" />
+              </label>
+
+              <label>
+                <span>Počet osôb</span>
+                <input type="number" name="count" placeholder="napr. 15" min="1" />
+              </label>
+            </div>
+
+            <label>
+              <span>Typ požiadavky</span>
+              <select name="type">
+                <option>Firemné stretnutie</option>
+                <option>Školenie / workshop</option>
+                <option>Súkromná objednávka</option>
+                <option>Iné</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Detaily objednávky</span>
+              <textarea
+                name="details"
+                rows="5"
+                placeholder="Napíšte približný rozsah, čas doručenia, preferované občerstvenie a ďalšie požiadavky."
+              ></textarea>
+            </label>
+
+            <button class="btn btn-light" type="submit">Odoslať dopyt</button>
+            <p class="form-message" id="formMessage"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container contact-grid">
+        <div class="contact-card wide">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Fajnota v budove</h2>
+          <p>
+            V budove sa nachádzame hneď vedľa automatov na snacky, ktoré si čoskoro budete môcť zakúpiť aj priamo u nás.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Rýchle informácie</h3>
+          <ul>
+            <li>Raňajky a káva sú dostupné dlhodobo podľa stáleho lístka.</li>
+            <li>Denné obedové menu sa aktualizuje priebežne.</li>
+            <li>Catering je možné objednať na firemné aj súkromné účely.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p><strong>Fajnota</strong> — interná kantína</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
