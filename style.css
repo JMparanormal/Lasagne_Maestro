@@ -1073,3 +1073,11 @@ body::before {
   font-size: clamp(3rem, 6vw, 5.5rem);
   line-height: 0.95;
 }
+
+
+#kontakt h2 {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+}
