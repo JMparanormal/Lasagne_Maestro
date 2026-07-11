@@ -859,3 +859,17 @@ body::before {
   font-weight: 600;
   letter-spacing: 0.02em;
 }
+
+
+#denne-menu {
+  background:
+    linear-gradient(
+      rgba(6, 63, 51, 0.72),
+      rgba(6, 63, 51, 0.72)
+    ),
+    url("assets/denne-menu-pozadie.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
