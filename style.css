@@ -1145,3 +1145,10 @@ body::before {
     right: 8px;
   }
 }
+
+
+/* Odstránenie svetlého filtra z kariet */
+#ranajky .menu-item::before,
+#dezerty .menu-item::before {
+  content: none;
+}
