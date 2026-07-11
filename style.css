@@ -1045,3 +1045,16 @@ body::before {
     grid-template-columns: 1fr;
   }
 }
+
+
+#dezerty .menu-item {
+  position: relative;
+  padding-bottom: 42px;
+}
+
+#dezerty .menu-item strong {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  z-index: 2;
+}
