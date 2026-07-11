@@ -1152,3 +1152,59 @@ body::before {
 #dezerty .menu-item::before {
   content: none;
 }
+
+
+
+@media (max-width: 650px) {
+  /* Úvodný obrázok pod hornou lištou */
+  .hero {
+    min-height: 480px;
+    align-items: start;
+  }
+
+  /* Orez fotografie na mobile */
+  .hero-image {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* Obsah začne vyššie pri texte Vitajte */
+  .hero-content {
+    padding-top: 42px;
+    padding-bottom: 36px;
+  }
+
+  /* Menší hlavný nadpis */
+  .hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.2rem);
+    line-height: 0.9;
+    margin-bottom: 16px;
+  }
+
+  /* Menší text pod nadpisom */
+  .hero-content > p:not(.eyebrow) {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    max-width: 90%;
+  }
+
+  /* Menšia medzera nad tlačidlami */
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 18px;
+  }
+
+  /* Tri malé tlačidlá vedľa seba */
+  .hero-actions .btn {
+    width: auto;
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 0.72rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
