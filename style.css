@@ -1214,7 +1214,7 @@ body::before {
 @media (max-width: 650px) {
   .hero {
     min-height: 0;
-    height: 410px;
+    height: 350px;
     position: relative;
     overflow: hidden;
   }
@@ -1228,8 +1228,8 @@ body::before {
 
   .hero-content {
     height: 100%;
-    padding-top: 30px;
-    padding-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
