@@ -912,3 +912,21 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
+.food-card {
+  background: transparent;
+}
+
+.food-card-body {
+  background:
+    linear-gradient(
+      rgba(255, 248, 235, 0.84),
+      rgba(255, 248, 235, 0.84)
+    ),
+    url("assets/karta-lasagne-pozadie.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
