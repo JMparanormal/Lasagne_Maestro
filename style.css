@@ -338,10 +338,51 @@ code {
   color: var(--green);
 }
 
+.lasagne-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .food-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 24px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+
+.food-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  scroll-snap-align: start;
+}
+
+.slider-arrow {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #e9b53b;
+  border-radius: 50%;
+  background: #063f33;
+  color: #e9b53b;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 2;
+}
+
+.slider-arrow:hover {
+  background: #0c5b49;
+  transform: scale(1.06);
+}
+
+.slider-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+  transform: none;
 }
 
 .food-card {
@@ -608,9 +649,7 @@ footer {
     text-align: center;
   }
 
-  .food-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
 
   .split,
   .reservation-grid,
