@@ -935,7 +935,7 @@ body::before {
 
 /* Spoločné nastavenie kariet v sekcii Raňajky */
 #ranajky .menu-item {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
