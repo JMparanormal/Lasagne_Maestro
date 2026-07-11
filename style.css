@@ -1301,3 +1301,36 @@ background: rgba(255, 244, 196, 0.98);
     white-space: nowrap;
   }
 }
+@media (max-width: 650px) {
+  .hero-content .hero-actions {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    width: calc(100vw - 24px) !important;
+    max-width: none !important;
+
+    margin-top: 20px !important;
+    margin-left: calc(50% - 50vw + 12px) !important;
+    margin-right: 0 !important;
+
+    gap: 8px !important;
+  }
+
+  .hero-content .hero-actions .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 46px !important;
+
+    padding: 8px 4px !important;
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 0.82rem !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+}
