@@ -815,7 +815,9 @@ body::before {
   flex-wrap: wrap;
   gap: 12px;
 }
-
+.hero-actions .btn {
+  font-size: 1rem;
+}
 @media (max-width: 600px) {
   .hero-actions {
     flex-direction: column;
