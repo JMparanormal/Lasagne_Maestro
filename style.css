@@ -1267,3 +1267,9 @@ body::before {
     white-space: nowrap;
   }
 }
+@media (max-width: 950px) {
+  .site-header,
+  .main-nav {
+    background: rgba(255, 250, 232, 0.98);
+  }
+}
