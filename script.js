@@ -75,3 +75,57 @@ form.addEventListener('submit', event => {
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+
+
+const lasagneGrid = document.getElementById("lasagne-grid");
+const lasagnePrev = document.getElementById("lasagne-prev");
+const lasagneNext = document.getElementById("lasagne-next");
+
+function getLasagneScrollAmount() {
+  const firstCard = lasagneGrid?.querySelector(".food-card");
+
+  if (!firstCard) {
+    return 0;
+  }
+
+  const gridStyles = window.getComputedStyle(lasagneGrid);
+  const gap = Number.parseFloat(gridStyles.columnGap || gridStyles.gap) || 0;
+
+  return firstCard.getBoundingClientRect().width + gap;
+}
+
+function updateLasagneArrows() {
+  if (!lasagneGrid || !lasagnePrev || !lasagneNext) {
+    return;
+  }
+
+  const maximumScroll =
+    lasagneGrid.scrollWidth - lasagneGrid.clientWidth;
+
+  lasagnePrev.disabled = lasagneGrid.scrollLeft <= 2;
+  lasagneNext.disabled =
+    lasagneGrid.scrollLeft >= maximumScroll - 2;
+}
+
+lasagnePrev?.addEventListener("click", () => {
+  lasagneGrid.scrollBy({
+    left: -getLasagneScrollAmount(),
+    behavior: "smooth"
+  });
+});
+
+lasagneNext?.addEventListener("click", () => {
+  lasagneGrid.scrollBy({
+    left: getLasagneScrollAmount(),
+    behavior: "smooth"
+  });
+});
+
+lasagneGrid?.addEventListener("scroll", updateLasagneArrows);
+
+window.addEventListener("resize", updateLasagneArrows);
+
+window.addEventListener("load", () => {
+  setTimeout(updateLasagneArrows, 100);
+});
