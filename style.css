@@ -828,3 +828,18 @@ body::before {
   }
 }
 
+
+#dezerty {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      rgba(247, 239, 224, 0.82),
+      rgba(247, 239, 224, 0.82)
+    ),
+    url("assets/dezerty-pozadie.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
