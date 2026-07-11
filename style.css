@@ -745,22 +745,32 @@ footer {
 
 
 
+html {
+  background-color: #f7ead4;
+}
+
 body {
   position: relative;
-  background-color: #f7f1e7;
+  min-height: 100vh;
+  isolation: isolate;
+  background: transparent;
 }
 
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
-
-  background-image: url("assets/pozadie.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0.08;
-  pointer-events: none;
   z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(247, 234, 212, 0.82),
+      rgba(247, 234, 212, 0.82)
+    ),
+    url("assets/pozadie.png");
+
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
 }
