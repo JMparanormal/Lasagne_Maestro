@@ -973,3 +973,75 @@ body::before {
 #ranajky .menu-item:nth-child(4) {
   background-image: url("assets/ranajky-salami.png");
 }
+
+
+
+/* Dezerty – 3 karty vedľa seba */
+#dezerty .simple-menu-grid {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: none;
+}
+
+/* Spoločné nastavenie dezertových kariet */
+#dezerty .menu-item {
+  position: relative;
+  overflow: hidden;
+  min-height: 130px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Svetlá vrstva kvôli čitateľnosti textu */
+#dezerty .menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 235, 0.78);
+  pointer-events: none;
+}
+
+/* Text nad obrázkom */
+#dezerty .menu-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Individuálne obrázky */
+#dezerty .menu-item:nth-child(1) {
+  background-image: url("assets/dezert-croissant.png");
+}
+
+#dezerty .menu-item:nth-child(2) {
+  background-image: url("assets/dezert-croissant-kakao.png");
+}
+
+#dezerty .menu-item:nth-child(3) {
+  background-image: url("assets/dezert-croissant-malina.png");
+}
+
+#dezerty .menu-item:nth-child(4) {
+  background-image: url("assets/dezert-croissant-pistacia.png");
+}
+
+#dezerty .menu-item:nth-child(5) {
+  background-image: url("assets/dezert-tiramisu.png");
+}
+
+#dezerty .menu-item:nth-child(6) {
+  background-image: url("assets/dezert-panna-cotta.png");
+}
+
+
+@media (max-width: 950px) {
+  #dezerty .simple-menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  #dezerty .simple-menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
