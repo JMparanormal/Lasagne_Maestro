@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bistro Lasagne Maestro – domáce lasagne, raňajky, dezerty a obedové menu v centre Bratislavy.">
+  <meta name="theme-color" content="#063f33">
+  <title>Bistro Lasagne Maestro | Heydukova 12, Bratislava</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Bistro Lasagne Maestro – domov">
+        <img src="assets/logo.png" alt="Bistro Lasagne Maestro">
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Otvoriť menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Hlavná navigácia">
+        <a href="#tyzdenne-menu">Týždenné menu</a>
+        <a href="#denne-menu">Denné menu</a>
+        <a href="#stale-menu">Stále menu</a>
+        <a href="#lasagne">Lasagne</a>
+        <a href="#ranajky">Raňajky</a>
+        <a href="#dezerty">Dezerty</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="nav-cta" href="#rezervacia">Rezervácia</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <img class="hero-image" src="assets/restauracia.png" alt="Interiér Bistra Lasagne Maestro">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Vitajte v Bistro Lasagne Maestro</p>
+        <h1>Talianske chute<br>v centre Bratislavy</h1>
+        <p>Pravá talianska chuť, domáca poctivosť a čerstvé suroviny. Lasagne, raňajky, dezerty aj výhodné obedové menu.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#denne-menu">Pozrieť menu</a>
+          <a class="btn btn-light" href="#rezervacia">Rezervovať stôl</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow dark">O nás</p>
+          <h2>Domáce lasagne a talianske dobroty pre každý deň</h2>
+        </div>
+        <div class="intro-copy">
+          <p>V Bistre Lasagne Maestro veríme, že skutočná chuť začína kvalitnými surovinami. Naše lasagne pripravujeme podľa tradičných talianskych receptov, výhradne z čerstvých a poctivých ingrediencií.</p>
+          <p>Okrem lahodných lasagní si u nás vychutnáte pestré raňajky, domáce dezerty a obedové menu, ktoré spája autentickú chuť s moderným servisom.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section menu-image-section" id="tyzdenne-menu">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow dark">Aktuálna ponuka</p>
+          <h2>Týždenné menu</h2>
+          <p>Pri aktualizácii stačí nahradiť súbor <code>assets/menu-tyzdenne.png</code> novým obrázkom s rovnakým názvom.</p>
+        </div>
+        <figure class="menu-poster">
+          <img id="weekly-menu-image" src="assets/menu-tyzdenne.png" alt="Týždenné obedové menu Bistro Lasagne Maestro">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-green menu-image-section" id="denne-menu">
+      <div class="container">
+        <div class="section-heading centered light-text">
+          <p class="eyebrow">Dnes varíme</p>
+          <h2>Denné menu</h2>
+          <p>Obrázok sa automaticky prepína podľa pracovného dňa. Nahrádzajte súbory <code>menu-pondelok.png</code> až <code>menu-piatok.png</code>.</p>
+        </div>
+        <div class="day-tabs" role="tablist" aria-label="Výber denného menu">
+          <button data-day="1" role="tab">Po</button><button data-day="2" role="tab">Ut</button><button data-day="3" role="tab">St</button><button data-day="4" role="tab">Št</button><button data-day="5" role="tab">Pi</button>
+        </div>
+        <figure class="menu-poster dark-poster">
+          <img id="daily-menu-image" src="assets/menu-pondelok.png" alt="Denné obedové menu Bistro Lasagne Maestro">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="lasagne">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Naša špecialita</p>
+          <h2>Lasagne</h2>
+          <p>Od klasických mäsových variácií až po lahodné vegetariánske verzie.</p>
+        </div>
+        <div class="food-grid" id="lasagne-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-cream" id="stale-menu">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Po celý deň</p>
+          <h2>Stále menu</h2>
+        </div>
+        <div class="simple-menu-grid">
+          <article class="menu-item"><div><h3>Sandwich Mortadella</h3><p>Mortadella, ricotta, kapary, sušené paradajky, pesto</p><small>200g (1,7,8)</small></div><strong>4,90 €</strong></article>
+          <article class="menu-item"><div><h3>Sandwich Mozzarella</h3><p>Mozzarella di Bufala, parmezán, paradajkové pesto, rukola</p><small>200g (1,7)</small></div><strong>4,90 €</strong></article>
+          <article class="menu-item"><div><h3>Ciabatta Prosciutto</h3><p>Prosciutto Crudo, Prosciutto Cotto, mozzarella, parmezán, bazalkové pesto</p><small>200g</small></div><strong>5,90 €</strong></article>
+          <article class="menu-item"><div><h3>Ciabatta Salami</h3><p>Prosciutto Cotto, Salami Napoli picante, mozzarella, parmezán</p><small>200g (1,3,7,8)</small></div><strong>5,90 €</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ranajky">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow dark">Dobré ráno</p><h2>Raňajky</h2></div>
+        <div class="simple-menu-grid">
+          <article class="menu-item"><div><h3>Croissant</h3><small>60g (1,3,7)</small></div><strong>2,50 €</strong></article>
+          <article class="menu-item"><div><h3>Croissant kakaový</h3><small>100g (1,3,7)</small></div><strong>3,90 €</strong></article>
+          <article class="menu-item"><div><h3>Croissant malinový</h3><small>100g (1,3,7)</small></div><strong>3,90 €</strong></article>
+          <article class="menu-item"><div><h3>Croissant pistácia</h3><small>100g (1,3,7,8)</small></div><strong>4,90 €</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cream" id="dezerty">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow dark">Sladká bodka</p><h2>Dezerty</h2></div>
+        <div class="simple-menu-grid two-col">
+          <article class="menu-item"><div><h3>Tiramisu</h3><small>250g (1,3,7)</small></div><strong>5,90 €</strong></article>
+          <article class="menu-item"><div><h3>Panna Cotta</h3><small>80g (7)</small></div><strong>4,90 €</strong></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="gallery-image"><img src="assets/terasa.png" alt="Terasa Bistra Lasagne Maestro"></div>
+      <div class="gallery-copy">
+        <p class="eyebrow">Príjemné posedenie</p>
+        <h2>V centre mesta, no s pokojnou atmosférou</h2>
+        <p>Zastavte sa na rýchly obed, rannú kávu alebo pokojné posedenie s priateľmi.</p>
+        <a class="btn btn-primary" href="#kontakt">Ako sa k nám dostať</a>
+      </div>
+    </section>
+
+    <section class="section" id="rezervacia">
+      <div class="container reservation-grid">
+        <div>
+          <p class="eyebrow dark">Rezervácie</p>
+          <h2>Rezervujte si stôl cez WhatsApp</h2>
+          <p>Vyplňte údaje a po odoslaní sa otvorí WhatsApp s pripravenou správou. Rezervácia je platná po našom potvrdení.</p>
+          <a class="whatsapp-direct" href="https://wa.me/421917367347" target="_blank" rel="noopener">Napísať priamo na WhatsApp</a>
+        </div>
+        <form class="reservation-form" id="reservation-form">
+          <label>Meno<input type="text" name="name" autocomplete="name" required></label>
+          <label>Telefón<input type="tel" name="phone" autocomplete="tel" required></label>
+          <div class="form-row">
+            <label>Dátum<input type="date" name="date" required></label>
+            <label>Čas<input type="time" name="time" required></label>
+          </div>
+          <label>Počet osôb<input type="number" name="guests" min="1" max="20" value="2" required></label>
+          <label>Poznámka<textarea name="note" rows="3" placeholder="Detská stolička, alergie, oslava..."></textarea></label>
+          <button class="btn btn-primary" type="submit">Odoslať cez WhatsApp</button>
+          <p class="form-note">Odoslaním formulára súhlasíte s použitím údajov výhradne na vybavenie rezervácie.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-green" id="kontakt">
+      <div class="container contact-grid light-text">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Tešíme sa na vašu návštevu</h2>
+          <address>
+            <a href="https://maps.google.com/?q=Heydukova+12+Bratislava" target="_blank" rel="noopener">Heydukova 12, Bratislava</a>
+            <a href="tel:+421917367347">0917 367 347</a>
+          </address>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61570023247935" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/lasagnemaestro/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://wa.me/421917367347" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="map-card">
+          <iframe title="Mapa – Bistro Lasagne Maestro" src="https://www.google.com/maps?q=Heydukova%2012%2C%20Bratislava&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-whatsapp" href="https://wa.me/421917367347?text=Dobr%C3%BD%20de%C5%88%2C%20m%C3%A1m%20z%C3%A1ujem%20o%20rezerv%C3%A1ciu%20v%20Bistro%20Lasagne%20Maestro." target="_blank" rel="noopener" aria-label="Napísať cez WhatsApp">WA</a>
+
+  <footer>
+    <div class="container footer-inner">
+      <img src="assets/logo.png" alt="Bistro Lasagne Maestro">
+      <p>© <span id="year"></span> Bistro Lasagne Maestro. Všetky práva vyhradené.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
