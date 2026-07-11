@@ -1058,3 +1058,9 @@ body::before {
   bottom: 12px;
   z-index: 2;
 }
+
+
+.gallery-copy h2 {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+}
