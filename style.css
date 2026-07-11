@@ -846,5 +846,13 @@ body::before {
 
 
 #tyzdenne-menu {
-  padding-top: 15px;
+  padding-top: 5px;
+}
+
+
+.hero-actions .btn {
+  font-family: "Allura", cursive;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
