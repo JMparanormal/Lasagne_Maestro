@@ -745,32 +745,22 @@ footer {
 
 
 
-html {
-  background-color: #f7f1e7;
-}
-
 body {
   position: relative;
-  min-height: 100vh;
-  isolation: isolate;
-  background: transparent;
+  background-color: #f7f1e7;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -1;
-  pointer-events: none;
 
-  background:
-    linear-gradient(
-      rgba(247, 241, 231, 0.88),
-      rgba(247, 241, 231, 0.88)
-    ),
-    url("assets/pozadie.png");
-
+  background-image: url("assets/pozadie.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
 }
