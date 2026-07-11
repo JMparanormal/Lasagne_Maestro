@@ -1108,3 +1108,40 @@ body::before {
   object-fit: cover;
   display: block;
 }
+@media (max-width: 650px) {
+  .lasagne-slider {
+    position: relative;
+    width: 100%;
+  }
+
+  #lasagne-grid {
+    display: flex;
+    width: 100%;
+    gap: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  #lasagne-grid .food-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    width: 42px;
+    height: 42px;
+    transform: translateY(-50%);
+  }
+
+  .slider-arrow-left {
+    left: 8px;
+  }
+
+  .slider-arrow-right {
+    right: 8px;
+  }
+}
