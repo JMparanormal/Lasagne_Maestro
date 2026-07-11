@@ -1270,6 +1270,6 @@ body::before {
 @media (max-width: 950px) {
   .site-header,
   .main-nav {
-background: rgba(255, 238, 170, 0.98);
+background: rgba(255, 244, 196, 0.98);
   }
 }
