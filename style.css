@@ -930,3 +930,46 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+
+
+/* Spoločné nastavenie kariet v sekcii Raňajky */
+#ranajky .menu-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Jemná svetlá vrstva kvôli čitateľnosti textu */
+#ranajky .menu-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 248, 235, 0.82);
+  pointer-events: none;
+}
+
+/* Text musí zostať nad vrstvou */
+#ranajky .menu-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Každá karta má vlastný obrázok */
+#ranajky .menu-item:nth-child(1) {
+  background-image: url("assets/ranajky-mortadella.png");
+}
+
+#ranajky .menu-item:nth-child(2) {
+  background-image: url("assets/ranajky-mozzarella.png");
+}
+
+#ranajky .menu-item:nth-child(3) {
+  background-image: url("assets/ranajky-prosciutto.png");
+}
+
+#ranajky .menu-item:nth-child(4) {
+  background-image: url("assets/ranajky-salami.png");
+}
