@@ -774,3 +774,29 @@ body::before {
   background-position: top center;
   background-repeat: no-repeat;
 }
+
+
+.page-background {
+  position: relative;
+  isolation: isolate;
+  background-color: #f7ead4;
+}
+
+.page-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(247, 234, 212, 0.78),
+      rgba(247, 234, 212, 0.78)
+    ),
+    url("assets/pozadie.png");
+
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: repeat-y;
+}
