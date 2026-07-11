@@ -772,5 +772,5 @@ body::before {
 
   background-size: 100% auto;
   background-position: top center;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
 }
