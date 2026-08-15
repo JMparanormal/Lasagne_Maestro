@@ -1334,3 +1334,33 @@ background: rgba(255, 244, 196, 0.98);
     white-space: nowrap !important;
   }
 }
+
+
+
+
+
+
+
+/* Raňajky – nech text nelezie cez obrázok sandwichu */
+#ranajky .menu-item > div {
+  width: 55%;
+  max-width: 55%;
+}
+
+#ranajky .menu-item p {
+  max-width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+#ranajky .menu-item {
+  min-height: 145px;
+  align-items: flex-start;
+}
+
+/* cena vpravo hore */
+#ranajky .menu-item strong {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
